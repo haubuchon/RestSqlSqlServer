@@ -99,11 +99,11 @@
 	<!-- Configure absolute path to restsql properties file -->
 	<context-param>
 		<param-name>org.restsql.properties</param-name>
-		<param-value>/etc/opt/restsql/restsql.properties</param-value>
+		<param-value>/etc/restsql.properties</param-value>
 	</context-param>
 
 	<!-- Uncomment security-roles, security-constraints and login-config for authentication/authorization -->
-	<!--
+
 	<security-role>
 	    <role-name>all</role-name>
 	</security-role>
@@ -140,6 +140,7 @@
 		</web-resource-collection>
 		<auth-constraint>
 			<role-name>admin</role-name>
+			<role-name>all</role-name>
 		</auth-constraint>
 		<user-data-constraint>
 			<transport-guarantee>NONE</transport-guarantee>
@@ -149,5 +150,5 @@
 		<auth-method>BASIC</auth-method>
 		<realm-name>UserDatabase</realm-name>
 	</login-config>
-	-->
+
 </web-app>
